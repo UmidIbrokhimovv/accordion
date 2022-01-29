@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bedfe8;
+}
+.accordion-cont {
+  max-width: 550px;
+  margin: 15px 20px;
+}
+.label h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 500;
+}
+.label {
+  width: 100%;
+  background: #00b4db;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.label::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 35px;
+  transform: translateY(-50%);
+}
+.active .label::after {
+  content: "-";
+}
+.text {
+  background-color: #fff;
+  font-size: 18px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+.active .text {
+  overflow: auto;
+  height: auto;
+  padding: 10px;
+}
